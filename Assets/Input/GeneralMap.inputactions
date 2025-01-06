@@ -1,0 +1,112 @@
+{
+    "name": "GeneralMap",
+    "maps": [
+        {
+            "name": "General",
+            "id": "2df54723-cb6b-420f-b0a0-28266d90f174",
+            "actions": [
+                {
+                    "name": "Touch_1_Contact",
+                    "type": "Button",
+                    "id": "8deeacd4-ec50-4f8a-b968-7d192ede9125",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Touch_2_Contact",
+                    "type": "Button",
+                    "id": "ea6283ad-6ebd-42b8-9071-27d6d76f2001",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Touch_1_Position",
+                    "type": "Value",
+                    "id": "5d5864c0-4ea5-4804-9bd2-2eecb730c32f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Touch_2_Position",
+                    "type": "Value",
+                    "id": "124c45bb-29cc-4dd3-b46f-3a1815413049",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5fa78114-e067-4983-aa29-13c492b6f1d7",
+                    "path": "<Touchscreen>/touch0/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch_1_Contact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32310982-0612-452a-9e13-e6b19825ce88",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch_1_Contact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "104ef131-6c21-4afd-8408-e212c2f2f444",
+                    "path": "<Touchscreen>/touch0/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch_1_Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0683f930-ecb7-4d2f-aa3d-4dd034c42356",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch_1_Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0135762d-ef13-4ffb-9f41-410b60f59e65",
+                    "path": "<Touchscreen>/touch1/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch_2_Contact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "27811fa2-97df-4a38-99de-fc850c1a3d69",
+                    "path": "<Touchscreen>/touch1/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch_2_Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
