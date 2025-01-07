@@ -13,7 +13,7 @@ public class PlayerControler : MonoBehaviour
     public GameObject D_Check;
     public GameObject U_Check;
 
-    public GameObject Swipe;
+    public bool canMove;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,7 @@ public class PlayerControler : MonoBehaviour
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 0, -90f);
             speed = maxSpeed;
-            Swipe.SetActive(false);
+            canMove = false;
         }
     }
 
@@ -43,7 +43,7 @@ public class PlayerControler : MonoBehaviour
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 90f);
             speed = maxSpeed;
-            Swipe.SetActive(false);
+            canMove = false;
         }
     }
     public void DownMovement()
@@ -52,7 +52,7 @@ public class PlayerControler : MonoBehaviour
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 180f);
             speed = maxSpeed;
-            Swipe.SetActive(false);
+            canMove = false;
         }
     }
     public void UpMovement()
@@ -61,7 +61,7 @@ public class PlayerControler : MonoBehaviour
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0f);
             speed = maxSpeed;
-            Swipe.SetActive(false);
+            canMove = false;
         }
     }
     public void OnTriggerEnter(Collider collision)

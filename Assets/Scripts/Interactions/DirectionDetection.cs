@@ -6,16 +6,18 @@ public class DirectionDetection : MonoBehaviour
 {
     public bool canDoInput;
 
+    public GameObject Player;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnTriggerEnter(Collider col)
@@ -23,7 +25,7 @@ public class DirectionDetection : MonoBehaviour
         if (col.gameObject.tag == "wall")
         {
             canDoInput = false;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControler>().Swipe.SetActive(true);
+            Player.GetComponent<PlayerControler>().canMove = true;
         }
     }
 
