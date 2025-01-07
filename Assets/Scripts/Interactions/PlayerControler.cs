@@ -8,33 +8,23 @@ public class PlayerControler : MonoBehaviour
 {
     public float speed;
     public float maxSpeed;
-    public bool Speed_Check;
     public GameObject R_Check;
     public GameObject L_Check;
     public GameObject D_Check;
     public GameObject U_Check;
+
     public GameObject Swipe;
 
     // Start is called before the first frame update
     void Start()
     {
         speed = 0;
-        Speed_Check = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         gameObject.transform.Translate(Vector3.up * speed * Time.deltaTime);
-
-        if (Speed_Check == true)
-        {
-            Swipe.SetActive(false);
-        }
-        else
-        {
-            Swipe.SetActive(true);
-        }
     }
 
     public void RightMovement()
@@ -43,8 +33,8 @@ public class PlayerControler : MonoBehaviour
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 0, -90f);
             speed = maxSpeed;
+            Swipe.SetActive(false);
         }
-        Speed_Check = true;
     }
 
     public void LeftMovement()
@@ -53,8 +43,8 @@ public class PlayerControler : MonoBehaviour
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 90f);
             speed = maxSpeed;
+            Swipe.SetActive(false);
         }
-        Speed_Check = true;
     }
     public void DownMovement()
     {
@@ -62,8 +52,8 @@ public class PlayerControler : MonoBehaviour
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 180f);
             speed = maxSpeed;
+            Swipe.SetActive(false);
         }
-        Speed_Check = true;
     }
     public void UpMovement()
     {
@@ -71,15 +61,14 @@ public class PlayerControler : MonoBehaviour
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0f);
             speed = maxSpeed;
+            Swipe.SetActive(false);
         }
-        Speed_Check = true;
     }
     public void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("wall"))
         {
             speed = 0;
-            Speed_Check = false;
         }
     }
 }

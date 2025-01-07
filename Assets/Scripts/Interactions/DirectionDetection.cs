@@ -23,6 +23,7 @@ public class DirectionDetection : MonoBehaviour
         if (col.gameObject.tag == "wall")
         {
             canDoInput = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControler>().Swipe.SetActive(true);
         }
     }
 

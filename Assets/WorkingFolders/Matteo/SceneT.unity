@@ -434,16 +434,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1307931106188368834, guid: fad64e58ca118cd47939d0a4a9623dab,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.243455
-      objectReference: {fileID: 0}
-    - target: {fileID: 1307931106188368834, guid: fad64e58ca118cd47939d0a4a9623dab,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.48691
-      objectReference: {fileID: 0}
     - target: {fileID: 4207061291194727799, guid: fad64e58ca118cd47939d0a4a9623dab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -494,45 +484,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4505785184566302663, guid: fad64e58ca118cd47939d0a4a9623dab,
+    - target: {fileID: 4594777206017616401, guid: fad64e58ca118cd47939d0a4a9623dab,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25625
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505785184566302663, guid: fad64e58ca118cd47939d0a4a9623dab,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.5125
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957959932887259152, guid: fad64e58ca118cd47939d0a4a9623dab,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25625
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957959932887259152, guid: fad64e58ca118cd47939d0a4a9623dab,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.5125
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5902008101404604262, guid: fad64e58ca118cd47939d0a4a9623dab,
         type: 3}
       propertyPath: maxSpeed
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6284457523108691127, guid: fad64e58ca118cd47939d0a4a9623dab,
         type: 3}
       propertyPath: m_Name
       value: PlayerControler
-      objectReference: {fileID: 0}
-    - target: {fileID: 7283736292647564983, guid: fad64e58ca118cd47939d0a4a9623dab,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.243455
-      objectReference: {fileID: 0}
-    - target: {fileID: 7283736292647564983, guid: fad64e58ca118cd47939d0a4a9623dab,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.48691
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
