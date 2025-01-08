@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gestures Input System.unity
     guid: 19dcf667a4e2b6449a628dd6777a8409
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gestures Input Manager.unity
     guid: 6172e884ee2c4ce42957f7ca8274240e
+  - enabled: 1
+    path: Assets/WorkingFolders/Matteo/Menu.unity
+    guid: 5a78d754785f144418e3c0ad3a30f1ad
+  - enabled: 1
+    path: Assets/WorkingFolders/Matteo/SelectionChapitre.unity
+    guid: 7c48ad5ccabb90845898cebe477a018d
   m_configObjects: {}

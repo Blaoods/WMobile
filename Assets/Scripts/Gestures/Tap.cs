@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Tap : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Tap : MonoBehaviour
     private float timeOfLastTap = 0;
     public float doubleTapTime = 0.2f;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +27,18 @@ public class Tap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    
+    // Fonction appelée pour changer de scène
+    public void ChangeScene(string sceneName)
+    {
+        // Charge la scène en utilisant son nom
+        SceneManager.LoadScene(sceneName);
     }
 
-	public void OnMouseDown()
+
+public void OnMouseDown()
 	{
         if(doubleTap == true)
 		{
