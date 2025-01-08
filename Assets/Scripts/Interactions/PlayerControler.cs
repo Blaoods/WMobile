@@ -11,6 +11,8 @@ public class PlayerControler : MonoBehaviour
 
     public float speed;
 
+    public CameraShake Camera;
+
     public void TurnRight()
     {
         gameObject.transform.rotation = Quaternion.Euler(0, 90, -90);
@@ -37,7 +39,10 @@ public class PlayerControler : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             //gameObject.transform.position = DestinationPosition;
-            gameObject.transform.DOMove(DestinationPosition, speed).SetEase(Ease.OutExpo);
+            gameObject.transform.DOMove(DestinationPosition, speed).SetEase(Ease.OutExpo).OnComplete(() =>
+            {
+                Camera.TriggerShake(0.5f, 0.2f);
+            });
         }
 
         Vector3 rayStart = transform.position;
