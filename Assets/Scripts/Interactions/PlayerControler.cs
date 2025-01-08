@@ -1,96 +1,69 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class PlayerControler : MonoBehaviour
 {
-    public float speed;
-    public float maxSpeed;
-    public GameObject R_Check;
-    public GameObject L_Check;
-    public GameObject D_Check;
-    public GameObject U_Check;
+    public float rayDistance = 10f; // Distance maximale du raycast
+    public string stopTag = "wall"; // Tag des objets qui arrêtent le raycast
+    public float offsetDistance = 1f; // Distance avant le point d'impact
 
-    public bool canMove;
+    public Vector3 DestinationPosition;
 
-    // Start is called before the first frame update
-    void Start()
+    public void TurnRight()
     {
-        speed = 0;
+        gameObject.transform.rotation = Quaternion.Euler(0, 90, -90);
     }
 
-    // Update is called once per frame
+    public void TurnLeft()
+    {
+        gameObject.transform.rotation = Quaternion.Euler(-180, 90, -90);
+    }
+
+    public void TurnDown()
+    {
+        gameObject.transform.rotation = Quaternion.Euler(90, 90, -90);
+    }
+
+    public void TurnUp()
+    {
+        gameObject.transform.rotation = Quaternion.Euler(-90, 90, -90);
+    }
+
+
     void Update()
     {
-        gameObject.transform.Translate(Vector3.up * speed * Time.deltaTime);
-    }
-
-    public void RightMovement()
-    {   
-        if (R_Check.GetComponent<DirectionDetection>().canDoInput == true)
+        if (Input.GetMouseButtonUp(0))
         {
-            gameObject.transform.rotation = Quaternion.Euler(0, 0, -90f);
-            speed = maxSpeed;
-            canMove = false;
-            R_Check.GetComponent<BoxCollider>().enabled = true;
-            L_Check.GetComponent<BoxCollider>().enabled = false;
-            D_Check.GetComponent<BoxCollider>().enabled = false;
-            U_Check.GetComponent<BoxCollider>().enabled = false;
+            gameObject.transform.position = DestinationPosition;
+        }
+
+        Vector3 rayStart = transform.position;
+        Vector3 forwardDirection = transform.forward;
+
+        // Debug Raycast
+        Debug.DrawRay(rayStart, forwardDirection * rayDistance, Color.red);
+
+        // Lancer le raycast
+        if (Physics.Raycast(rayStart, forwardDirection, out RaycastHit hit, rayDistance))
+        {
+            Debug.Log($"Hit {hit.collider.name} at position {hit.point}");
+
+            if (hit.collider.CompareTag(stopTag))
+            {
+                Debug.Log("Raycast stopped by an object with tag: Wall");
+                Debug.Log($"Impact position: {hit.point}");
+                Vector3 adjustedPosition = hit.point - forwardDirection * offsetDistance;
+
+                // Exécuter une action pour arrêter le traitement
+                HandleCollision(adjustedPosition);
+                return;
+            }
         }
     }
 
-    public void LeftMovement()
+    // Gérer ce qui se passe quand le raycast s'arrête
+    private void HandleCollision(Vector3 impactPoint)
     {
-        if (L_Check.GetComponent<DirectionDetection>().canDoInput == true)
-        {
-            gameObject.transform.rotation = Quaternion.Euler(0, 0, 90f);
-            speed = maxSpeed;
-            canMove = false;
-
-            R_Check.GetComponent<BoxCollider>().enabled = false;
-            L_Check.GetComponent<BoxCollider>().enabled = true;
-            D_Check.GetComponent<BoxCollider>().enabled = false;
-            U_Check.GetComponent<BoxCollider>().enabled = false;
-        }
+        DestinationPosition = impactPoint;
+        Debug.Log($"Adjusted destination position: {DestinationPosition}");
     }
-    public void DownMovement()
-    {
-        if (D_Check.GetComponent<DirectionDetection>().canDoInput == true)
-        {
-            gameObject.transform.rotation = Quaternion.Euler(0, 0, 180f);
-            speed = maxSpeed;
-            canMove = false;
-
-
-            R_Check.GetComponent<BoxCollider>().enabled = false;
-            L_Check.GetComponent<BoxCollider>().enabled = false;
-            D_Check.GetComponent<BoxCollider>().enabled = true;
-            U_Check.GetComponent<BoxCollider>().enabled = false;
-        }
-    }
-    public void UpMovement()
-    {
-        if (U_Check.GetComponent<DirectionDetection>().canDoInput == true)
-        {
-            gameObject.transform.rotation = Quaternion.Euler(0, 0, 0f);
-            speed = maxSpeed;
-            canMove = false;
-
-
-            R_Check.GetComponent<BoxCollider>().enabled = false;
-            L_Check.GetComponent<BoxCollider>().enabled = false;
-            D_Check.GetComponent<BoxCollider>().enabled = false;
-            U_Check.GetComponent<BoxCollider>().enabled = true;
-
-        }
-    }
-    /*public void OnTriggerEnter(Collider collision)
-    {
-        if (collision.gameObject.CompareTag("wall"))
-        {
-            speed = 0;
-        }
-    }*/
 }
