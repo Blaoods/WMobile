@@ -34,6 +34,10 @@ public class PlayerControler : MonoBehaviour
             gameObject.transform.rotation = Quaternion.Euler(0, 0, -90f);
             speed = maxSpeed;
             canMove = false;
+            R_Check.GetComponent<BoxCollider>().enabled = true;
+            L_Check.GetComponent<BoxCollider>().enabled = false;
+            D_Check.GetComponent<BoxCollider>().enabled = false;
+            U_Check.GetComponent<BoxCollider>().enabled = false;
         }
     }
 
@@ -44,6 +48,11 @@ public class PlayerControler : MonoBehaviour
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 90f);
             speed = maxSpeed;
             canMove = false;
+
+            R_Check.GetComponent<BoxCollider>().enabled = false;
+            L_Check.GetComponent<BoxCollider>().enabled = true;
+            D_Check.GetComponent<BoxCollider>().enabled = false;
+            U_Check.GetComponent<BoxCollider>().enabled = false;
         }
     }
     public void DownMovement()
@@ -53,6 +62,12 @@ public class PlayerControler : MonoBehaviour
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 180f);
             speed = maxSpeed;
             canMove = false;
+
+
+            R_Check.GetComponent<BoxCollider>().enabled = false;
+            L_Check.GetComponent<BoxCollider>().enabled = false;
+            D_Check.GetComponent<BoxCollider>().enabled = true;
+            U_Check.GetComponent<BoxCollider>().enabled = false;
         }
     }
     public void UpMovement()
@@ -62,13 +77,20 @@ public class PlayerControler : MonoBehaviour
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0f);
             speed = maxSpeed;
             canMove = false;
+
+
+            R_Check.GetComponent<BoxCollider>().enabled = false;
+            L_Check.GetComponent<BoxCollider>().enabled = false;
+            D_Check.GetComponent<BoxCollider>().enabled = false;
+            U_Check.GetComponent<BoxCollider>().enabled = true;
+
         }
     }
-    public void OnTriggerEnter(Collider collision)
+    /*public void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("wall"))
         {
             speed = 0;
         }
-    }
+    }*/
 }

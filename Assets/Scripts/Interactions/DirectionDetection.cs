@@ -8,6 +8,13 @@ public class DirectionDetection : MonoBehaviour
 
     public GameObject Player;
 
+    public GameObject R_Check;
+    public GameObject L_Check;
+    public GameObject D_Check;
+    public GameObject U_Check;
+
+    public GameObject OppositeDirection;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,15 +32,23 @@ public class DirectionDetection : MonoBehaviour
         if (col.gameObject.tag == "wall")
         {
             canDoInput = false;
+
+            R_Check.GetComponent<Collider>().enabled = true;
+            L_Check.GetComponent<Collider>().enabled = true;
+            D_Check.GetComponent<Collider>().enabled = true;
+            U_Check.GetComponent<Collider>().enabled = true;
+
+            OppositeDirection.GetComponent<DirectionDetection>().canDoInput = true;
             Player.GetComponent<PlayerControler>().canMove = true;
+            Player.GetComponent<PlayerControler>().speed = 0;
         }
     }
 
-    public void OnTriggerExit(Collider col)
+    /*public void OnTriggerExit(Collider col)
     {
         if (col.gameObject.tag == "wall")
         {
             canDoInput = true;
         }
-    }
+    }*/
 }

@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 111958216658090469}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.79, y: -12.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -103,7 +103,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -222,6 +222,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canDoInput: 1
   Player: {fileID: 111958216658090469}
+  R_Check: {fileID: 5887289100994808234}
+  L_Check: {fileID: 538042575152106167}
+  D_Check: {fileID: 593444441135557601}
+  U_Check: {fileID: 4619273260661496529}
+  OppositeDirection: {fileID: 5887289100994808234}
 --- !u!54 &5895092745953785974
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -318,6 +323,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canDoInput: 1
   Player: {fileID: 111958216658090469}
+  R_Check: {fileID: 5887289100994808234}
+  L_Check: {fileID: 538042575152106167}
+  D_Check: {fileID: 593444441135557601}
+  U_Check: {fileID: 4619273260661496529}
+  OppositeDirection: {fileID: 4619273260661496529}
 --- !u!54 &6170441031521321114
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -370,7 +380,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2418221298632848092}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.31, y: 4.54, z: 7.04}
   m_LocalScale: {x: 1.3977, y: 1.3977, z: 1.3977}
   m_ConstrainProportionsScale: 0
@@ -466,6 +476,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canDoInput: 1
   Player: {fileID: 111958216658090469}
+  R_Check: {fileID: 5887289100994808234}
+  L_Check: {fileID: 538042575152106167}
+  D_Check: {fileID: 593444441135557601}
+  U_Check: {fileID: 4619273260661496529}
+  OppositeDirection: {fileID: 593444441135557601}
 --- !u!54 &6146591828042583360
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -884,6 +899,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canDoInput: 1
   Player: {fileID: 9148419457757919976}
+  R_Check: {fileID: 5235645042882833333}
+  L_Check: {fileID: 6793404508224715994}
+  D_Check: {fileID: 7430402313577088871}
+  U_Check: {fileID: 5045662659416075564}
+  OppositeDirection: {fileID: 7430402313577088871}
 --- !u!54 &6812095911328712952
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -980,6 +1000,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canDoInput: 1
   Player: {fileID: 9148419457757919976}
+  R_Check: {fileID: 5235645042882833333}
+  L_Check: {fileID: 6793404508224715994}
+  D_Check: {fileID: 7430402313577088871}
+  U_Check: {fileID: 5045662659416075564}
+  OppositeDirection: {fileID: 6793404508224715994}
 --- !u!54 &437107752838315095
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1076,6 +1101,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canDoInput: 1
   Player: {fileID: 111958216658090469}
+  R_Check: {fileID: 5887289100994808234}
+  L_Check: {fileID: 538042575152106167}
+  D_Check: {fileID: 593444441135557601}
+  U_Check: {fileID: 4619273260661496529}
+  OppositeDirection: {fileID: 538042575152106167}
 --- !u!54 &8159377827433284418
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1129,7 +1159,7 @@ Transform:
   m_GameObject: {fileID: 6428643677140439376}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.7900004, y: -12.800001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1221,6 +1251,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canDoInput: 1
   Player: {fileID: 9148419457757919976}
+  R_Check: {fileID: 5235645042882833333}
+  L_Check: {fileID: 6793404508224715994}
+  D_Check: {fileID: 7430402313577088871}
+  U_Check: {fileID: 5045662659416075564}
+  OppositeDirection: {fileID: 5235645042882833333}
 --- !u!54 &6824473919511018282
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1317,6 +1352,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canDoInput: 1
   Player: {fileID: 9148419457757919976}
+  R_Check: {fileID: 5235645042882833333}
+  L_Check: {fileID: 6793404508224715994}
+  D_Check: {fileID: 7430402313577088871}
+  U_Check: {fileID: 5045662659416075564}
+  OppositeDirection: {fileID: 5045662659416075564}
 --- !u!54 &7352767826597958475
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1496,7 +1536,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
