@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerControler : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class PlayerControler : MonoBehaviour
     public float offsetDistance = 1f; // Distance avant le point d'impact
 
     public Vector3 DestinationPosition;
+
+    public float speed;
 
     public void TurnRight()
     {
@@ -33,7 +36,8 @@ public class PlayerControler : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(0))
         {
-            gameObject.transform.position = DestinationPosition;
+            //gameObject.transform.position = DestinationPosition;
+            gameObject.transform.DOMove(DestinationPosition, speed).SetEase(Ease.OutExpo);
         }
 
         Vector3 rayStart = transform.position;
