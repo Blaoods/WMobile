@@ -16,9 +16,6 @@ public class DistanceCalculator : MonoBehaviour
         float distance = Vector3.Distance(player1.transform.position, player2.transform.position);
 
         
-        Debug.Log("La distance entre les deux joueurs est : " + distance);
-
-        
         if (distance <= threshold)
         {
             DeletSwipe.SetActive(false);

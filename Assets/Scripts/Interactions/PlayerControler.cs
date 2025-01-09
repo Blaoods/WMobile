@@ -54,12 +54,9 @@ public class PlayerControler : MonoBehaviour
         // Lancer le raycast
         if (Physics.Raycast(rayStart, forwardDirection, out RaycastHit hit, rayDistance))
         {
-            Debug.Log($"Hit {hit.collider.name} at position {hit.point}");
 
             if (hit.collider.CompareTag(stopTag))
             {
-                Debug.Log("Raycast stopped by an object with tag: Wall");
-                Debug.Log($"Impact position: {hit.point}");
                 Vector3 adjustedPosition = hit.point - forwardDirection * offsetDistance;
 
                 // Exécuter une action pour arrêter le traitement
@@ -69,10 +66,10 @@ public class PlayerControler : MonoBehaviour
         }
     }
 
+
     // Gérer ce qui se passe quand le raycast s'arrête
     private void HandleCollision(Vector3 impactPoint)
     {
         DestinationPosition = impactPoint;
-        Debug.Log($"Adjusted destination position: {DestinationPosition}");
     }
 }
