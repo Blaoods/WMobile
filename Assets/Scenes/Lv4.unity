@@ -140,6 +140,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fonction
       objectReference: {fileID: 0}
+    - target: {fileID: 2416435542784016630, guid: 2a0ce8b925d33b14499e9f27b562e9d4,
+        type: 3}
+      propertyPath: SampleScene
+      value: Lv4
+      objectReference: {fileID: 0}
     - target: {fileID: 4372018117634565932, guid: 2a0ce8b925d33b14499e9f27b562e9d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -150,6 +155,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 7.39
       objectReference: {fileID: 0}
+    - target: {fileID: 5193323125900964785, guid: 2a0ce8b925d33b14499e9f27b562e9d4,
+        type: 3}
+      propertyPath: SampleScene
+      value: Lv4
+      objectReference: {fileID: 0}
     - target: {fileID: 6826822722983722197, guid: 2a0ce8b925d33b14499e9f27b562e9d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -159,6 +169,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 5.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7027880721919415029, guid: 2a0ce8b925d33b14499e9f27b562e9d4,
+        type: 3}
+      propertyPath: sceneToLoad
+      value: Lv5
       objectReference: {fileID: 0}
     - target: {fileID: 8228546214959861258, guid: 2a0ce8b925d33b14499e9f27b562e9d4,
         type: 3}
