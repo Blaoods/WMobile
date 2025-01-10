@@ -130,15 +130,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2677176074375126746, guid: 4a3da9151c0991542bc2433df758fa55,
+        type: 3}
+      propertyPath: sceneToLoad
+      value: Lv5
+      objectReference: {fileID: 0}
     - target: {fileID: 4121652727370061954, guid: 4a3da9151c0991542bc2433df758fa55,
         type: 3}
       propertyPath: m_Name
       value: Fonction 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4189994873149222228, guid: 4a3da9151c0991542bc2433df758fa55,
+        type: 3}
+      propertyPath: SampleScene
+      value: Lv4
+      objectReference: {fileID: 0}
     - target: {fileID: 4645185718016992530, guid: 4a3da9151c0991542bc2433df758fa55,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050065256938582551, guid: 4a3da9151c0991542bc2433df758fa55,
+        type: 3}
+      propertyPath: SampleScene
+      value: Lv4
       objectReference: {fileID: 0}
     - target: {fileID: 7565962008851124546, guid: 4a3da9151c0991542bc2433df758fa55,
         type: 3}
