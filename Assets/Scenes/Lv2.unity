@@ -989,6 +989,11 @@ PrefabInstance:
       propertyPath: SampleScene
       value: Lv2
       objectReference: {fileID: 0}
+    - target: {fileID: 4645185718016992530, guid: 4a3da9151c0991542bc2433df758fa55,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5050065256938582551, guid: 4a3da9151c0991542bc2433df758fa55,
         type: 3}
       propertyPath: SampleScene
@@ -1012,12 +1017,12 @@ PrefabInstance:
     - target: {fileID: 8180790499283170175, guid: 4a3da9151c0991542bc2433df758fa55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.42
+      value: -0.74
       objectReference: {fileID: 0}
     - target: {fileID: 8180790499283170175, guid: 4a3da9151c0991542bc2433df758fa55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.01
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 8180790499283170175, guid: 4a3da9151c0991542bc2433df758fa55,
         type: 3}
