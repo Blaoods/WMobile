@@ -7,6 +7,7 @@ public class DistanceCalculator : MonoBehaviour
     public GameObject objectToAppear;
     public GameObject DeletSwipe;
     public GameObject Particul;
+    public GameObject Spawner;
     private float Timer;  
     public float MaxTimer = 3f;  
     public float threshold = 0.1f;
@@ -26,7 +27,7 @@ public class DistanceCalculator : MonoBehaviour
 
             if (CulSpawned == false)
             {
-                Instantiate(Particul, player1.transform.position, Quaternion.Euler(-90,0,0));
+                Instantiate(Particul, Spawner.transform.position, Quaternion.Euler(-90,0,0));
                 CulSpawned = true;
             }
 
