@@ -6,9 +6,12 @@ public class DistanceCalculator : MonoBehaviour
     public GameObject player2;  
     public GameObject objectToAppear;
     public GameObject DeletSwipe;
+    public GameObject Particul;
     private float Timer;  
     public float MaxTimer = 3f;  
     public float threshold = 0.1f;
+
+    public bool CulSpawned;
 
     void Update()
     {
@@ -20,6 +23,13 @@ public class DistanceCalculator : MonoBehaviour
         {
             DeletSwipe.SetActive(false);
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>().isInMenu = true;
+
+            if (CulSpawned == false)
+            {
+                Instantiate(Particul, player1.transform.position, Quaternion.Euler(-90,0,0));
+                CulSpawned = true;
+            }
+
 
 
             Timer += Time.deltaTime;

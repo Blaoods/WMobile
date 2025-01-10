@@ -3531,8 +3531,11 @@ MonoBehaviour:
   player2: {fileID: 4384625979159851956}
   objectToAppear: {fileID: 559721054838991204}
   DeletSwipe: {fileID: 500108141994198271}
-  MaxTimer: 0.5
+  Particul: {fileID: 7833971046074983199, guid: fd7ca5c0b7193794d9ada6d58129f899,
+    type: 3}
+  MaxTimer: 2
   threshold: 0.1
+  CulSpawned: 0
 --- !u!65 &7213570992890322917
 BoxCollider:
   m_ObjectHideFlags: 0
