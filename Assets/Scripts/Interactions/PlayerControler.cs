@@ -13,36 +13,56 @@ public class PlayerControler : MonoBehaviour
 
     public CameraShake Camera;
 
+    public bool GoTimerDash;
+    public float TimerDash;
+    public float MaxTimerDash;
+
     public void TurnRight()
     {
         gameObject.transform.rotation = Quaternion.Euler(0, 90, -90);
+        GoTimerDash = true;
     }
 
     public void TurnLeft()
     {
         gameObject.transform.rotation = Quaternion.Euler(-180, 90, -90);
+        GoTimerDash = true;
     }
 
     public void TurnDown()
     {
         gameObject.transform.rotation = Quaternion.Euler(90, 90, -90);
+        GoTimerDash = true;
     }
 
     public void TurnUp()
     {
         gameObject.transform.rotation = Quaternion.Euler(-90, 90, -90);
+        GoTimerDash = true;
     }
 
 
     void Update()
     {
+        if (GoTimerDash == true)
+        {
+            TimerDash += Time.deltaTime;
+        }
+
+        if (TimerDash >= MaxTimerDash)
+        {
+            gameObject.transform.DOMove(DestinationPosition, speed).SetEase(Ease.OutExpo);
+            GoTimerDash = false;
+            TimerDash = 0;
+        }
+
         if (Input.GetMouseButtonUp(0))
         {
             //gameObject.transform.position = DestinationPosition;
-            gameObject.transform.DOMove(DestinationPosition, speed).SetEase(Ease.OutExpo).OnComplete(() =>
-            {
+            /*gameObject.transform.DOMove(DestinationPosition, speed).SetEase(Ease.OutExpo).OnComplete(() =>
+            {*/
                 Camera.TriggerShake(0.5f, 0.2f);
-            });
+            //});
         }
 
         Vector3 rayStart = transform.position;
